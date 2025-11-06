@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Verde: Programação Sustentável</title>
+    <meta name="author" content="Onivaldo Miquelino">  
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos Customizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-leaf text-green-500 text-xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Código Verde</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-green-500 font-medium">Início</a>
+                    <a href="#energia" class="text-gray-600 hover:text-green-500 font-medium">Otimização de Energia</a>
+                    <a href="#algoritmos" class="text-gray-600 hover:text-green-500 font-medium">Algoritmos Eficientes</a>
+                    <a href="#nuvem" class="text-gray-600 hover:text-green-500 font-medium">Recursos em Nuvem</a>
+                    <a href="#dicas" class="text-gray-600 hover:text-green-500 font-medium">Dicas Práticas</a>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3 pb-3">
+                <a href="#inicio" class="block text-gray-600 hover:text-green-500 font-medium">Início</a>
+                <a href="#energia" class="block text-gray-600 hover:text-green-500 font-medium">Otimização de Energia</a>
+                <a href="#algoritmos" class="block text-gray-600 hover:text-green-500 font-medium">Algoritmos Eficientes</a>
+                <a href="#nuvem" class="block text-gray-600 hover:text-green-500 font-medium">Recursos em Nuvem</a>
+                <a href="#dicas" class="block text-gray-600 hover:text-green-500 font-medium">Dicas Práticas</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Código Verde: Programação Sustentável</h1>
+                <p class="text-xl mb-8 opacity-90">Como programar de forma mais sustentável através da otimização de consumo de energia, eficiência de algoritmos e uso racional de recursos em nuvem.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#dicas" class="bg-white text-green-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        <i class="fas fa-lightbulb mr-2"></i>Ver Dicas Práticas
+                    </a>
+                    <a href="#algoritmos" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        <i class="fas fa-code mr-2"></i>Otimizar Algoritmos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Optimization Section -->
+    <section id="energia" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Otimização de Consumo de Energia</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Reduza o impacto ambiental do seu código através de práticas que diminuem o consumo energético.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Hardware Eficiente</h3>
+                    <p class="text-gray-600">Escolha componentes de baixo consumo energético e configure sistemas para economizar energia quando ocioso.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-desktop text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Software Otimizado</h3>
+                    <p class="text-gray-600">Desenvolva aplicações que utilizem recursos de forma eficiente, evitando processamento desnecessário.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-power-off text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Gerenciamento de Energia</h3>
+                    <p class="text-gray-600">Implemente políticas de gerenciamento de energia em servidores e dispositivos para reduzir consumo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Algorithm Efficiency Section -->
+    <section id="algoritmos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Eficiência de Algoritmos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Algoritmos eficientes consomem menos recursos computacionais e reduzem o impacto ambiental.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-chart-line text-green-500 mr-3"></i>Complexidade Algorítmica
+                    </h3>
+                    <p class="text-gray-600 mb-4">Escolha algoritmos com melhor complexidade de tempo e espaço para reduzir o consumo de recursos.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Prefira O(n log n) em vez de O(n²) quando possível</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Utilize estruturas de dados adequadas ao problema</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Evite loops aninhados desnecessários</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-database text-green-500 mr-3"></i>Otimização de Consultas
+                    </h3>
+                    <p class="text-gray-600 mb-4">Consultas de banco de dados otimizadas reduzem significativamente o consumo de recursos.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Utilize índices apropriados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Evite consultas N+1 com eager loading</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Selecione apenas as colunas necessárias</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloud Resources Section -->
+    <section id="nuvem" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Uso Racional de Recursos em Nuvem</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Aproveite ao máximo os recursos de nuvem sem desperdício, reduzindo custos e impacto ambiental.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-cloud text-green-500 mr-3"></i>Escalabilidade Inteligente
+                            </h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-server text-green-500 mt-1 mr-2"></i>
+                                    <span>Utilize auto-scaling baseado em demanda real</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrows-alt-v text-green-500 mt-1 mr-2"></i>
+                                    <span>Escale verticalmente apenas quando necessário</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-clock text-green-500 mt-1 mr-2"></i>
+                                    <span>Desligue recursos não utilizados em horários de baixa demanda</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-save text-green-500 mr-3"></i>Armazenamento Eficiente
+                            </h3>
+                            <ul class="text-gray-600 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-archive text-green-500 mt-1 mr-2"></i>
+                                    <span>Utilize camadas de armazenamento adequadas aos dados</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-trash-alt text-green-500 mt-1 mr-2"></i>
+                                    <span>Implemente políticas de retenção e exclusão de dados</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-compress-arrows-alt text-green-500 mt-1 mr-2"></i>
+                                    <span>Comprima dados sempre que possível</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Tips Section -->
+    <section id="dicas" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Dicas Práticas para Desenvolvedores</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Implemente essas práticas no seu dia a dia para programar de forma mais sustentável.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-6">No Desenvolvimento</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-code text-green-500"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-medium text-gray-800">Refatore código legado</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Código antigo e ineficiente consome mais recursos.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-tachometer-alt text-green-500"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-medium text-gray-800">Monitore performance</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Identifique gargalos e otimize continuamente.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-cube text-green-500"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-medium text-gray-800">Use microsserviços</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Escale apenas os componentes necessários.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-8 bg-green-50">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-6">Na Infraestrutura</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-leaf text-green-600"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-medium text-gray-800">Escolha provedores verdes</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Priorize empresas com compromisso ambiental.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-recycle text-green-600"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-medium text-gray-800">Implemente CI/CD eficiente</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Reduza tempo de build e recursos utilizados.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-chart-pie text-green-600"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-medium text-gray-800">Analise métricas de consumo</h4>
+                                        <p class="text-gray-600 text-sm mt-1">Monitore e otimize o uso de recursos continuamente.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600 mb-4">Quer saber mais sobre programação sustentável?</p>
+                    <button id="download-guide" class="inline-flex items-center text-green-600 hover:text-green-700 font-medium cursor-pointer">
+                        <span>Baixe nosso guia completo</span>
+                        <i class="fas fa-arrow-down ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-leaf text-green-400 text-xl"></i>
+                        <span class="text-xl font-bold">Código Verde</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md">Promovendo práticas de programação sustentável para reduzir o impacto ambiental da tecnologia.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white">Início</a></li>
+                        <li><a href="#energia" class="text-gray-400 hover:text-white">Otimização de Energia</a></li>
+                        <li><a href="#algoritmos" class="text-gray-400 hover:text-white">Algoritmos Eficientes</a></li>
+                        <li><a href="#nuvem" class="text-gray-400 hover:text-white">Recursos em Nuvem</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contato</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>contato@codigoverde.dev</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe mt-1 mr-2"></i>
+                            <span>www.codigoverde.dev</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Código Verde. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+<script src="script.js"></script>
+
+</body>
+</html>
